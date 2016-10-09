@@ -130,7 +130,7 @@ AC_SUBST([systemdsystemunitdir], [$with_systemdsystemunitdir])
 AM_CONDITIONAL([HAVE_SYSTEMD], [test "x$with_systemdsystemunitdir" != "xno"])
 
 
-AC_CONFIG_FILES([Makefile nemea-supervisor.spec nemea-supervisor nemea-supervisor.service munin/Makefile munin/nemea_supervisor configs/Makefile configs/prepare_default_config.sh configs/warning.sup configs/data-sources/ipfixcol.sup configs/supervisor_config_template.xml])
+AC_CONFIG_FILES([Makefile nemea-supervisor.spec nemea-supervisor systemd/Makefile systemd/nemea-supervisor.service munin/Makefile munin/nemea_supervisor configs/Makefile configs/prepare_default_config.sh configs/warning.sup configs/data-sources/ipfixcol.sup configs/supervisor_config_template.xml])
 AC_OUTPUT
 echo
 echo
@@ -156,3 +156,5 @@ echo
 echo "Installation...........: make install (as root if needed, with 'su' or 'sudo')"
 echo "  prefix...............: $prefix"
 echo "  munin plugin.........: `if [[ -z  "$ENABLE_MUNIN_TRUE" ]]; then echo yes; else echo no; fi`"
+echo "  systemd..............: `if [[ -z  "$ENABLE_SYSTEMD_TRUE" ]]; then echo yes; else echo no; fi`"
+echo

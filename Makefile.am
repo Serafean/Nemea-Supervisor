@@ -15,8 +15,9 @@ EXTRA_DIST = nemea-supervisor README.md
 bin_SCRIPTS=nemea-supervisor
 
 
-DISTCHECK_CONFIGURE_FLAGS="--with-systemdsystemunitdir=$$dc_install_base/$(systemdsystemunitdir)"
-systemdsystemunit_DATA=nemea-supervisor.service
+if HAVE_SYSTEMD
+SUBDIRS+=systemd
+endif
 
 if MAKE_RPMS
 RPMDIR = RPMBUILD

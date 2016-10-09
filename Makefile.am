@@ -1,6 +1,10 @@
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS=munin configs
+SUBDIRS=configs
+if ENABLE_MUNIN
+SUBDIRS+=munin
+endif
+
 
 bin_PROGRAMS=supervisor supervisor_cli
 supervisor_SOURCES= supervisor.c supervisor.h supervisor_api.h supervisor_main.c internal.c internal.h

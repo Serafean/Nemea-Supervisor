@@ -108,6 +108,10 @@ else
   AC_MSG_ERROR([getopt() was not found, module depend on it...])
 fi
 
+AC_ARG_ENABLE([munin], AC_HELP_STRING([--disable-munin],[Disable Munin integration]),
+            [AM_CONDITIONAL([ENABLE_MUNIN], [test "x$enableval" = xyes])],
+            [AM_CONDITIONAL([ENABLE_MUNIN], [true])])
+
 AC_ARG_WITH([systemdsystemunitdir],
 	[AS_HELP_STRING([--with-systemdsystemunitdir=DIR], [Directory for systemd service files])],
 	[],
@@ -151,4 +155,4 @@ echo "  LIBS.................: $LIBS"
 echo
 echo "Installation...........: make install (as root if needed, with 'su' or 'sudo')"
 echo "  prefix...............: $prefix"
-echo
+echo "  munin plugin.........: `if [[ -z  "$ENABLE_MUNIN_TRUE" ]]; then echo yes; else echo no; fi`"

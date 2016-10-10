@@ -20,9 +20,10 @@ PKG_PROG_PKG_CONFIG
 
 pkgdatadir=${datadir}/nemea-supervisor
 AC_SUBST(pkgdatadir)
-rundir=${localstatedir}/run
-defaultsocketdir=${rundir}/nemea-supervisor
-defaultconfdir=${sysconfdir}
+rundir=${runstatedir}/nemea-supervisor
+defaultsocketdir=${rundir}
+defaultconfdir=${sysconfdir}/nemea
+localstatedir=${localstatedir}/nemea
 AC_SUBST(defaultsocketdir)
 
 AC_CONFIG_MACRO_DIR([m4])

@@ -23,12 +23,13 @@ Type=forking
 PIDFile=@defaultsocketdir@/nemea-supervisor.pid
 Environment="SOCKET=@defaultsocketdir@/nemea-supervisor.sock"
 Environment="CONFIG_TEMPLATE=@defaultconfdir@/supervisor_config_template.xml"
-Environment="LOG_PATH=/var/tmp/nemea"
+Environment="LOG_PATH=/var/log/nemea"
+Environment="CONF=@localstatedir@"
 Environment=LANG=C
 User=nemead
 Group=nemead
 
-ExecStart=@bindir@/supervisor -d -s $SOCKET -T $CONFIG_TEMPLATE -L $LOG_PATH
+ExecStart=@bindir@/supervisor -d -s $SOCKET -T $CONFIG_TEMPLATE -L $LOG_PATH -C $CONF
 ExecReload=@bindir@/supervisor_cli -r -s $SOCKET
 KillSignal=SIGTERM
 PrivateTmp=false

@@ -1,8 +1,8 @@
-detectorsdir = $(pkgdatadir)/detectors
-datasourcesdir = $(pkgdatadir)/data-sources
-reportersdir = $(pkgdatadir)/reporters
-loggersdir = $(pkgdatadir)/loggers
-othersdir = $(pkgdatadir)/others
+detectorsdir = $(defaultconfdir)/detectors
+datasourcesdir = $(defaultconfdir)/data-sources
+reportersdir = $(defaultconfdir)/reporters
+loggersdir = $(defaultconfdir)/loggers
+othersdir = $(defaultconfdir)/others
 
 pkgdata_DATA = warning.sup \
 	   template.sup \

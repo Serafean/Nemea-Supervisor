@@ -1,7 +1,7 @@
 <module>
 <name>dns_amplification_logger</name>
 <enabled>true</enabled>
-<path>/usr/bin/nemea/logger</path>
+<path>@libexecdir@/logger</path>
 <params>-t -T -a @localstatedir@/dns_amplification_detection/detected.log</params>
 <trapinterfaces>
 <interface>

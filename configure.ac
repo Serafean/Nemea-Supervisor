@@ -24,6 +24,7 @@ rundir=${runstatedir}/nemea-supervisor
 defaultsocketdir=${rundir}
 defaultconfdir=${sysconfdir}/nemea
 localstatedir=${localstatedir}/nemea
+libexecdir=${libexecdir}/nemea
 AC_SUBST(defaultsocketdir)
 
 AC_CONFIG_MACRO_DIR([m4])

@@ -1,7 +1,7 @@
 <module>
 <name>voip_fraud_detection</name>
 <enabled>true</enabled>
-<path>/usr/bin/nemea/voip_fraud_detection</path>
+<path>@libexecdir@/voip_fraud_detection</path>
 <params>-o -w -l @localstatedir@/voip_fraud_detection/log</params>
 <trapinterfaces>
 <interface>

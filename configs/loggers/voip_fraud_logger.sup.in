@@ -1,7 +1,7 @@
 <module>
 <name>voip_fraud_logger</name>
 <enabled>true</enabled>
-<path>/usr/bin/nemea/logger</path>
+<path>@libexecdir@/logger</path>
 <params>-t -T -a @localstatedir@/voip_fraud_detection/alerts.log</params>
 <trapinterfaces>
 <interface>

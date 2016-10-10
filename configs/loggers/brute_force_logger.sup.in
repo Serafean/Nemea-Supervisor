@@ -1,7 +1,7 @@
 <module>
 <name>brute_force_logger</name>
 <enabled>true</enabled>
-<path>/usr/bin/nemea/logger</path>
+<path>@libexecdir@/logger</path>
 <params>-t -T -a @localstatedir@/brute_force_detector/detected.log</params>
 <trapinterfaces>
 <interface>

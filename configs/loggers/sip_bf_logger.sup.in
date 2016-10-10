@@ -1,7 +1,7 @@
 <module>
 <name>sip_bf_logger</name>
 <enabled>true</enabled>
-<path>/usr/bin/nemea/logger</path>
+<path>@libexecdir@/logger</path>
 <params>-t -a @localstatedir@/sip_bf_detector/alerts.log</params>
 <trapinterfaces>
 <interface>

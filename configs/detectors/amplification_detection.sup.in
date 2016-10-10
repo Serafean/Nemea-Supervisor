@@ -1,7 +1,7 @@
 <module>
 <name>dns_amplification</name>
 <enabled>true</enabled>
-<path>/usr/bin/nemea/amplification_detection</path>
+<path>@libexecdir@/amplification_detection</path>
 <params>-d @localstatedir@/dns_amplification_detection/</params>
 <trapinterfaces>
 <interface>

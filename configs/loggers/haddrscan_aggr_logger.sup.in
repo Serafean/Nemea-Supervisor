@@ -1,13 +1,13 @@
 <module>
-<name>ipblacklistfilter_logger</name>
+<name>haddrscan_agg_logger</name>
 <enabled>true</enabled>
 <path>/usr/bin/nemea/logger</path>
-<params>-t -T -a /data/ipblacklistfilter/detected.log</params>
+<params>-t -T -a @localstatedir@/haddrscan/alerts.log</params>
 <trapinterfaces>
 <interface>
   <type>TCP</type>
   <direction>IN</direction>
-  <params>12006</params>
+  <params>12008</params>
 </interface>
 </trapinterfaces>
 </module>

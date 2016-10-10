@@ -1,13 +1,13 @@
 <module>
-<name>miner_detector_logger</name>
+<name>dns_amplification_logger</name>
 <enabled>true</enabled>
 <path>/usr/bin/nemea/logger</path>
-<params>-t -T -a /data/miner_detector/detected.log</params>
+<params>-t -T -a @localstatedir@/dns_amplification_detection/detected.log</params>
 <trapinterfaces>
 <interface>
-  <type>UNIXSOCKET</type>
+  <type>TCP</type>
   <direction>IN</direction>
-  <params>miner_detector_data_out</params>
+  <params>12001</params>
 </interface>
 </trapinterfaces>
 </module>

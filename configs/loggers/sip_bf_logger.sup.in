@@ -1,13 +1,13 @@
 <module>
-<name>dns_amplification_logger</name>
+<name>sip_bf_logger</name>
 <enabled>true</enabled>
 <path>/usr/bin/nemea/logger</path>
-<params>-t -T -a /data/dns_amplification_detection/detected.log</params>
+<params>-t -a @localstatedir@/sip_bf_detector/alerts.log</params>
 <trapinterfaces>
 <interface>
   <type>TCP</type>
   <direction>IN</direction>
-  <params>12001</params>
+  <params>12009</params>
 </interface>
 </trapinterfaces>
 </module>

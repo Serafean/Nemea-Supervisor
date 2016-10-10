@@ -1,13 +1,13 @@
 <module>
-<name>haddrscan_agg_logger</name>
+<name>hoststatsnemea_logger</name>
 <enabled>true</enabled>
 <path>/usr/bin/nemea/logger</path>
-<params>-t -T -a /data/haddrscan/alerts.log</params>
+<params>-t -T -a @localstatedir@/hoststatsnemea/detected.log</params>
 <trapinterfaces>
 <interface>
   <type>TCP</type>
   <direction>IN</direction>
-  <params>12008</params>
+  <params>12002</params>
 </interface>
 </trapinterfaces>
 </module>

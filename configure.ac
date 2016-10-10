@@ -130,7 +130,7 @@ AC_SUBST([systemdsystemunitdir], [$with_systemdsystemunitdir])
 AM_CONDITIONAL([HAVE_SYSTEMD], [test "x$with_systemdsystemunitdir" != "xno"])
 
 
-AC_CONFIG_FILES([Makefile nemea-supervisor.spec nemea-supervisor systemd/Makefile systemd/nemea-supervisor.service munin/Makefile munin/nemea_supervisor configs/Makefile configs/prepare_default_config.sh configs/warning.sup configs/data-sources/ipfixcol.sup configs/supervisor_config_template.xml])
+AC_CONFIG_FILES([Makefile nemea-supervisor.spec nemea-supervisor systemd/Makefile systemd/nemea-supervisor.service munin/Makefile munin/nemea_supervisor configs/Makefile configs/prepare_default_config.sh configs/warning.sup configs/data-sources/ipfixcol.sup configs/supervisor_config_template.xml configs/detectors/amplification_detection.sup configs/detectors/voipfrauddetection.sup configs/loggers/amplification_logger.sup configs/loggers/brute_force_hist_logger.sup configs/loggers/brute_force_logger.sup configs/loggers/dnstunnel_logger.sup configs/loggers/flowmeter_logger.sup configs/loggers/haddrscan_aggr_logger.sup configs/loggers/hoststats_logger.sup configs/loggers/ipblacklistfilter_logger.sup configs/loggers/miner_detector_logger.sup configs/loggers/sip_bf_logger.sup configs/loggers/voip_fraud_logger.sup configs/loggers/vportscan_aggr_logger.sup configs/amplification_detection.mkdir configs/brute_force_detector.mkdir configs/brute_force_hist_detector.mkdir configs/dnstunnel_detection.mkdir configs/flow_meter.mkdir configs/haddrscandetector.mkdir configs/hoststats.mkdir configs/ipblacklistfilter.mkdir configs/miner_detector.mkdir configs/multopt.mkdir configs/sip_bf_detector.mkdir configs/voipfrauddetection.mkdir configs/vportscandetector.mkdir])
 AC_OUTPUT
 echo
 echo

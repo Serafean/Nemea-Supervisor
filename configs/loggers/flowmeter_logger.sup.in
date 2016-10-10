@@ -2,7 +2,7 @@
 <name>flow_meter_logger</name>
 <enabled>false</enabled>
 <path>/usr/bin/nemea/logger</path>
-<params>-t -T -a /data/flow_meter/flows.log</params>
+<params>-t -T -a @localstatedir@/flow_meter/flows.log</params>
 <trapinterfaces>
 <interface>
   <type>UNIXSOCKET</type>

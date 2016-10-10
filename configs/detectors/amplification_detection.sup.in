@@ -1,18 +1,18 @@
 <module>
-<name>voip_fraud_detection</name>
+<name>dns_amplification</name>
 <enabled>true</enabled>
-<path>/usr/bin/nemea/voip_fraud_detection</path>
-<params>-o -w -l /data/voip_fraud_detection/log</params>
+<path>/usr/bin/nemea/amplification_detection</path>
+<params>-d @localstatedir@/dns_amplification_detection/</params>
 <trapinterfaces>
 <interface>
   <type>UNIXSOCKET</type>
   <direction>IN</direction>
-  <params>voip_data_source</params>
+  <params>flow_data_source</params>
 </interface>
 <interface>
   <type>TCP</type>
   <direction>OUT</direction>
-  <params>12003</params>
+  <params>12001</params>
 </interface>
 </trapinterfaces>
 </module>

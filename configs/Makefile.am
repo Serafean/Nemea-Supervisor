@@ -78,6 +78,6 @@ bin_SCRIPTS=prepare_default_config.sh set_default_nic.sh
 clean-local:
 	@rm -f ${BUILT_SOURCES}
 
-install-data-hook:
-	echo -e "\n\nRun script for creation of directories and setting permisions:\nprepare_default_config.sh install\n\n"
+#install-data-hook:
+#	echo -e "\n\nRun script for creation of directories and setting permisions:\nprepare_default_config.sh install\n\n"
 

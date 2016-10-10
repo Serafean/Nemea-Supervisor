@@ -4,26 +4,11 @@ reportersdir = $(pkgdatadir)/reporters
 loggersdir = $(pkgdatadir)/loggers
 othersdir = $(pkgdatadir)/others
 
-pkgdata_DATA = amplification_detection.mkdir \
-	   dnstunnel_detection.mkdir \
-	   brute_force_detector.mkdir \
-	   brute_force_hist_detector.mkdir \
-	   flow_meter.mkdir \
-	   hoststats.mkdir \
-	   haddrscandetector.mkdir \
-	   ipblacklistfilter.mkdir \
-	   miner_detector.mkdir \
-	   multopt.mkdir \
-	   prepare_default_config.sh \
-	   set_default_nic.sh \
-	   sip_bf_detector.mkdir \
-	   supervisor.mkdir \
-	   voipfrauddetection.mkdir \
-	   vportscandetector.mkdir \
-	   warning.sup \
+pkgdata_DATA = warning.sup \
 	   template.sup \
 	   config_example.xml \
 	   README.md
+#	   set_default_nic.sh
 
 others_DATA = others/multopt.sup \
        others/traffic_repeater.sup
@@ -73,7 +58,6 @@ loggers_DATA = loggers/amplification_logger.sup \
 EXTRA_DIST = ipfixcol-startup.xml supervisor_config_template.xml ${pkgdata_DATA} ${detectors_DATA} ${datasources_DATA} ${others_DATA} ${reporters_DATA} ${loggers_DATA}
 
 sysconf_DATA = supervisor_config_template.xml ipfixcol-startup.xml
-bin_SCRIPTS=prepare_default_config.sh set_default_nic.sh
 
 clean-local:
 	@rm -f ${BUILT_SOURCES}
